@@ -19,6 +19,15 @@ services:
       traefik.http.services.jellyfin.loadbalancer.server.port: 8096
       traefik.http.services.jellyfin.loadbalancer.server.scheme: http
 
+  tautulli:
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: mediaserver_default
+      traefik.http.routers.plex.tls.certresolver: prod
+      traefik.http.routers.plex.rule: Host(`${TAUTULLI_HOST}`)
+      traefik.http.services.plex.loadbalancer.server.port: 8181
+      traefik.http.services.plex.loadbalancer.server.scheme: http
+
   nzbget:
     labels:
       traefik.enable: "true"
