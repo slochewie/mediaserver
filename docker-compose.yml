@@ -26,15 +26,13 @@ services:
     command: -H unix:///var/run/docker.sock
     networks:
       - default
-#    ports:
-#      - 9000:9000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer:/data
 
   # https://docs.linuxserver.io/images/docker-plex
   plex:
-    image: ghcr.io/linuxserver/plex@sha256:7e9748ce442ac2ef5152a6f9ed53d36e7476c298f0608a8fe6e35c75762089cd
+    image: ghcr.io/linuxserver/plex:latest
     restart: unless-stopped
     environment:
       PUID: "${PUID}"
@@ -54,7 +52,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
-    image: ghcr.io/linuxserver/jellyfin@sha256:fa3398d4500313bcf635705f2e4a118b5ac409aa29e4ac907ea8fb46e1e99078
+    image: ghcr.io/linuxserver/jellyfin:latest
     restart: unless-stopped
     environment:
       PUID: "${PUID}"
@@ -82,7 +80,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbget
   nzbget:
-    image: ghcr.io/linuxserver/nzbget@sha256:9652129585d1f7fceb72b883ac5e4846d08548d763041c6aba5e4b33ca6012eb
+    image: ghcr.io/linuxserver/nzbget:latest
     restart: unless-stopped
     environment:
       PUID: "${PUID}"
@@ -96,7 +94,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
-    image: ghcr.io/linuxserver/sonarr@sha256:cfb771069a16f03c629d9b474c4ec500d89068d3a6d407958eee35ebb5ed6857
+    image: ghcr.io/linuxserver/sonarr:latest
     restart: unless-stopped
     environment:
       PUID: "${PUID}"
@@ -114,7 +112,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
-    image: ghcr.io/linuxserver/radarr@sha256:3f03b5d4ab7bc18508383c8af5f95d7afe8236c0dfbbfd670434cb9df3cae986
+    image: ghcr.io/linuxserver/radarr:latest
     restart: unless-stopped
     environment:
       PUID: "${PUID}"
@@ -132,7 +130,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
-    image: ghcr.io/linuxserver/nzbhydra2@sha256:df8100f8284ce2085a373fa49a3fc290ae8b38e178ce742f0f36f9ed9af8c453
+    image: ghcr.io/linuxserver/nzbhydra2:latest
     restart: unless-stopped
     environment:
       PUID: "${PUID}"
@@ -146,7 +144,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
-    image: ghcr.io/linuxserver/ombi@sha256:998ff72c1d2fa006671efc58a912d40eb3baa1583d061941b1df6fca2a8b698b
+    image: ghcr.io/linuxserver/ombi:latest
     restart: unless-stopped
     environment:
       PUID: ${PUID}
@@ -163,7 +161,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
-    image: ghcr.io/linuxserver/duplicati@sha256:39c81a11ceb89a82e97a50b7aaf31297a334218192e93c16527c2f2aeed4634e
+    image: ghcr.io/linuxserver/duplicati:latest
     restart: unless-stopped
     environment:
       PUID: 0
@@ -183,7 +181,7 @@ services:
 
   # https://hub.docker.com/r/netdata/netdata
   netdata:
-    image: netdata/netdata@sha256:d58cb941849e8c7032e1196f1ac06a02df2ea83fbdc6eea46ba75851cd33b446
+    image: netdata/netdata
     restart: unless-stopped
     hostname: ${NETDATA_HOST}
     environment:
