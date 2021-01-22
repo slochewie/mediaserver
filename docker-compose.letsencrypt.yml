@@ -23,10 +23,10 @@ services:
     labels:
       traefik.enable: "true"
       traefik.docker.network: mediaserver_default
-      traefik.http.routers.plex.tls.certresolver: prod
-      traefik.http.routers.plex.rule: Host(`${TAUTULLI_HOST}`)
-      traefik.http.services.plex.loadbalancer.server.port: 8181
-      traefik.http.services.plex.loadbalancer.server.scheme: http
+      traefik.http.routers.tautulli.tls.certresolver: prod
+      traefik.http.routers.tautulli.rule: Host(`${TAUTULLI_HOST}`)
+      traefik.http.services.tautulli.loadbalancer.server.port: 8181
+      traefik.http.services.tautulli.loadbalancer.server.scheme: http
 
   nzbget:
     labels:
