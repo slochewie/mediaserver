@@ -43,10 +43,14 @@ services:
       PLEX_CLAIM: "${PLEX_CLAIM}"
     networks:
       - default
+    ports:
+      - 32400:32400
     volumes:
       - "plex:/config"
       - "${MEDIA_DIR}:/media"
       - "/tmp:/tmp"
+    devices:
+      - "/dev/dri:/dev/dri"
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
