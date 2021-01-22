@@ -10,7 +10,7 @@ docker-based plex & usenet media server using custom subdomains over https
 
 ## Features
 
-- [Portainer] (https://www.portainer.io/) is the definitive open source container management GUI for Kubernetes, Docker, Swarm and ACI.
+- [Portainer](https://www.portainer.io/) is the definitive open source container management GUI for Kubernetes, Docker, Swarm and ACI.
 - [Plex](https://plex.tv/) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices.
 - [Tautulli](https://tautulli.com/) is a Python based monitoring and tracking tool for Plex Media Server.
 - [NZBGet](https://nzbget.net/) is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources.
