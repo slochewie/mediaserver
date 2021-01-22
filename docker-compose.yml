@@ -4,6 +4,7 @@ networks:
   default:
 
 volumes:
+  portainer:
   plex:
   jellyfin:
   tautulli:
@@ -16,6 +17,21 @@ volumes:
   traefik:
 
 services:
+  #https://documentation.portainer.io/
+  portainer:
+    image: portainer/portainer-ce
+    restart: unless-stopped
+    environment:
+      TZ: "${TZ}"
+    command: -H unix:///var/run/docker.sock
+    networks:
+      - default
+#    ports:
+#      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer:/data
+
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     image: ghcr.io/linuxserver/plex@sha256:7e9748ce442ac2ef5152a6f9ed53d36e7476c298f0608a8fe6e35c75762089cd
@@ -55,10 +71,10 @@ services:
       PUID: "${PUID}"
       PGID: "${PGID}"
       TZ: "${TZ}"
-    volumes:
-      - "tautulli:/config"
     networks:
       - default
+    volumes:
+      - "tautulli:/config"
 
   # https://docs.linuxserver.io/images/docker-nzbget
   nzbget:

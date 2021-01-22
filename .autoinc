@@ -1,3 +1,4 @@
+portainer/portainer-ce:latest
 ghcr.io/linuxserver/plex:latest
 ghcr.io/linuxserver/jellyfin:latest
 ghcr.io/linuxserver/tautulli:latest

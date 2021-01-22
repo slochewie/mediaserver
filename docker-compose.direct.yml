@@ -1,6 +1,10 @@
 version: "3.7"
 
 services:
+  portainer:
+    ports:
+      - "9000:9000/tcp"
+
   plex:
     ports:
       - "32400:32400/tcp"
