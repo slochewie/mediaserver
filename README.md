@@ -11,6 +11,7 @@ docker-based plex & usenet media server using custom subdomains over https
 ## Features
 
 - [Plex](https://plex.tv/) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices.
+- [Tautulli](https://tautulli.com/) is a Python based monitoring and tracking tool for Plex Media Server.
 - [NZBGet](https://nzbget.net/) is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources.
 - [Sonarr](https://sonarr.tv/) (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 - [Radarr](https://radarr.video/) - A fork of Sonarr to work with movies à la Couchpotato.
@@ -104,6 +105,7 @@ I didn't create any of these docker images myself, so credit goes to the
 maintainers, and the original software creators.
 
 - <https://hub.docker.com/r/linuxserver/plex/>
+- <https://hub.docker.com/r/linuxserver/tautulli/>
 - <https://hub.docker.com/r/linuxserver/nzbget/>
 - <https://hub.docker.com/r/linuxserver/sonarr/>
 - <https://hub.docker.com/r/linuxserver/radarr/>
