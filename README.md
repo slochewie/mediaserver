@@ -18,8 +18,10 @@ docker-based plex & usenet media server using custom subdomains over https
 - [Prowlarr](https://github.com/Prowlarr/Prowlarr) is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps.
 - [Ombi](https://ombi.io/) is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves.
 - [Netdata](https://www.netdata.cloud/) - Troubleshoot slowdowns and anomalies in your infrastructure with thousands of metrics, interactive visualizations, and insightful health alarms.
+- [Overseerr](https://overseerr.dev) is a request management and media discovery tool built to work with your existing Plex ecosystem.
 - [Duplicati](https://www.duplicati.com/) - Free backup software to store encrypted backups online.
 - [Traefik](https://traefik.io/) is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
+- [Tailscale](https://tailscale.com) makes creating software-defined networks easy: securely connecting users, services, and devices.
 
 ## Requirements
 
@@ -122,4 +124,6 @@ maintainers, and the original software creators.
 - <https://hub.docker.com/r/linuxserver/ombi>
 - <https://hub.docker.com/r/linuxserver/duplicati/>
 - <https://hub.docker.com/r/netdata/netdata/>
+- <https://hub.docker.com/r/linuxserver/overseerr/>
 - <https://hub.docker.com/_/traefik/>
+- <https://hub.docker.com/r/tailscale/tailscale/>
